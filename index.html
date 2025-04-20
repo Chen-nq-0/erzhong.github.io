@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第二中学官网</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="header" style="background-image: url('首页背景.jpg'); background-size: cover;">
+        <div class="logo">
+            <img src="二中logo.jpg" alt="第二中学" style="height: 80px;">
+        </div>
+        <nav class="nav">
+            <ul>
+                <li><a href="#about">关于我们</a></li>
+                <li><a href="#admissions">招生信息</a></li>
+                <li><a href="#contact">联系我们</a></li>
+                <li><a href="#news">新闻动态</a></li>
+                <li><a href="#events">校园活动</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="hero" class="hero">
+            <h1>欢迎来到第二中学</h1>
+            <p>黑龙江省绥化市北林区第二中学</p>
+            <button onclick="window.location.href='#admissions'">了解招生信息</button>
+        </section>
+        <section id="about" class="about">
+            <h2>关于我们</h2>
+            <p>我们的学校致力于提供高质量的教育，注重学生的全面发展。</p>
+            <ul>
+                <li>丰富的课程设置</li>
+                <li>经验丰富的教师团队</li>
+                <li>现代化的教学设施</li>
+            </ul>
+        </section>
+        <section id="admissions" class="admissions">
+            <h2>招生信息</h2>
+            <p>了解我们的招生政策和申请流程。</p>
+            <p>招生时间：2025年5月1日至2025年6月30日</p>
+            <p>招生对象：小高中生</p>
+        </section>
+        <section id="contact" class="contact">
+            <h2>联系我们</h2>
+            <p>有任何问题，请随时与我们联系。</p>
+            <p>电话：123-456-789</p>
+            <p>邮箱：@school.com</p>
+            <p>地址：黑龙江省绥化市北林区第二中学</p>
+        </section>
+        <section id="news" class="news">
+            <h2>新闻动态</h2>
+            <p>最新的学校新闻和公告。</p>
+            <div class="news-list">
+                <article class="news-item">
+                    <span class="news-index">1</span>
+                    <div class="news-content">
+                        <h3>传承雷锋精神 践行青春担当</h3>
+                        <p>绥化市第二中学2025年学雷锋主题教育活动纪实</p>
+                        <p>传承雷锋精神 践行青春担当——绥化市第二中学2025年学雷锋主题教育活动纪实</p>
+                        <a href="https://mp.weixin.qq.com/s/g12Dr0M4UcBYMNP6K-vQsg?scene=1" target="_blank">阅读更多</a>
+                    </div>
+                </article>
+                <!-- 1111 -->
+                <!--
+                <article class="news-item">
+                    <span class="news-index">2</span>
+                    <div class="news-content">
+                        <h3>新闻标题2</h3>
+                        <p>新闻内容2</p>
+                        <a href="#">阅读更多</a>
+                    </div>
+                </article>
+                -->
+            </div>
+        </section>
+        <section id="events" class="events">
+            <h2>校园活动</h2>
+            <p>没有活动。</p>
+        </section>
+        <section id="fantasy" class="fantasy">
+            <h2>逆天言论板块</h2>
+            <div class="fantasy-list">
+                <p>“这里是逆天言论展示区，欢迎畅所欲言！”</p>
+                <div class="fantasy-student">
+                    <h3>孙同学</h3>
+                    <div class="fantasy-images">
+                        <img src="1.png" alt="孙同学逆天言论1" style="max-width:220px; border-radius:10px; margin:8px; box-shadow:0 2px 8px #a084e833;">
+                        <img src="2.jpg" alt="孙同学逆天言论2" style="max-width:220px; border-radius:10px; margin:8px; box-shadow:0 2px 8px #a084e833;">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2025 第二中学官网. 版权所有。</p>
+    </footer>
+    <script src="heart-cursor.js"></script>
+    <script>
+        // 真实爱心SVG形状+节流，生成速度适中
+        (function () {
+            var lastTime = 0;
+            var interval = 120; // 每120ms生成一个爱心
+            document.addEventListener('mousemove', function (e) {
+                var now = Date.now();
+                if (now - lastTime < interval) return;
+                lastTime = now;
+                var heart = document.createElement('div');
+                heart.className = 'heart-cursor-svg';
+                heart.style.left = (e.clientX - 10) + 'px';
+                heart.style.top = (e.clientY - 10) + 'px';
+                heart.innerHTML = '<svg width="20" height="20" viewBox="0 0 20 20"><path d="M10 18s-6-4.35-8-7.5C-1 6.5 3.5 2 7 5c1.5 1.5 3 1.5 4.5 0C16.5 2 21 6.5 18 10.5c-2 3.15-8 7.5-8 7.5z" fill="#e25555"/></svg>';
+                document.body.appendChild(heart);
+                setTimeout(function () {
+                    heart.style.opacity = 0;
+                    heart.style.transform = 'scale(1.4) translateY(-10px)';
+                    setTimeout(function () {
+                        heart.remove();
+                    }, 500);
+                }, 400);
+            });
+        })();
+    </script>
+</body>
+
+</html>
